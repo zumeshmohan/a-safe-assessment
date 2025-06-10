@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/jokes")
@@ -30,9 +31,9 @@ public class JokesController {
      */
     @GetMapping("/count")
     public ResponseEntity<Integer> getJokeCount(){
-        List<Joke> jokes = jokesService.getAllJokes();
-        logger.debug("Received jokes list size is {}" , jokes.size());
-        return ResponseEntity.ok(jokes.size());
+        int count = jokesService.getJokesCount();
+        logger.info("Jokes count is {}",count);
+        return ResponseEntity.ok(count);
     }
 
     /**
