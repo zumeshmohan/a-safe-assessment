@@ -1,0 +1,20 @@
+<div class="joke-container" *ngIf="joke; else noJoke">
+  <div class="joke-card">
+    <h2 class="joke-question">{{ joke.setup }}</h2>
+
+    <div *ngIf="showPunchline; else punchlineButton">
+      <p class="joke-punchline">{{ joke.punchline }}</p>
+      <button class="next-button" (click)="nextJoke()">Next Joke</button>
+    </div>
+
+    <ng-template #punchlineButton>
+      <button class="reveal-button" (click)="revealPunchline()">Show Punchline</button>
+    </ng-template>
+  </div>
+</div>
+
+<ng-template #noJoke>
+  <div class="no-joke">
+    <p>No joke found.</p>
+  </div>
+</ng-template>
