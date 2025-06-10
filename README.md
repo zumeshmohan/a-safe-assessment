@@ -60,5 +60,8 @@ From the project root where the Dockerfile is located, run the follwoing command
 docker build -t jokehub:latest .
 docker run -p 8080:8080 jokehub
 ```
-
+# Screenshots
+<img src="images/screen1.png" alt="Screen1" width="80" height="80">
+<img src="images/screen2.png" alt="Screen2" width="80" height="80">
+<img src="images/screen3.png" alt="Screen3" width="80" height="80">
 
