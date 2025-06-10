@@ -15,3 +15,5 @@ EXPOSE 8080
 
 # Run application
 ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
+
+# End of Docker file
