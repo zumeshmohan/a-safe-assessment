@@ -21,7 +21,7 @@ ng build --configuration=production
 ```
 3. This will create static files in /frontend/jokes-ui/dist folder which need to be copied to Spring boot app.
 ```bash
-cp -r /frontend/jokes-ui/dist/jokes-ui/browser/* ../backend/src/main/resources/static/
+cp dist/jokes-ui/browser/* ../../backend/src/main/resources/static
 ```
 ## Building Backend(Spring Boot) App
 4. Navigate to the backend directory and build the Spring Boot app with Maven
